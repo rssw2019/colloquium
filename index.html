@@ -1,6 +1,8 @@
 
 <!--UNG Math Colloquium Page ..>
 <! -- http://faculty.ung.edu/rpsharma/Colloquium.html -->
+<!--UNG Math Colloquium Page ..>
+<! -- http://faculty.ung.edu/rpsharma/Colloquium.html -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -29,7 +31,7 @@
 		</div>		
 		<div class="main">
 			<div id="main1">
-				<!--Current Schedule or Past Abstract will populated here--->	
+				<!--Current Schedule or Past Abstract will populated here-->	
 			</div>
 			
 			<div id="committee">			
@@ -65,7 +67,7 @@
 				.then(function(data){
 					//Intro
 					let output='<h2> Spring 2021 Math Colloquium </h1>';
-					output+='<p> The Spring 2021 Math Colloquium talks will be virtual in Zoom. All talks are open to UNG faculty, staff, and students. These talks will be over a broad range of topics in pure math, applied math, math education, and innovative use of technology in math teaching. We welcome talks from inside and outside of UNG. If you would like to give a talk, please contact one of the organizing committee members. </p>';
+					output+='<p> Spring 2021 Math Colloquium talks will be virtual in Zoom. All talks are open to UNG faculty, staff, and students. These talks will be over a broad range of topics in pure math, applied math, math education, and innovative use of technology in math teaching. We welcome talks from inside and outside of UNG. If you would like to give a talk, please contact one of the organizing committee members. </p>';
 					//upcoming talk
 					output+=`<h3 style="margin-bottom: 10px;"> Upcoming Talk</h3>`;
 					//output+=`${data[0].Date}: <a href="#0" style="text-decoration:none;"> "${data[0].Title}" </a> by ${data[0].Speaker}.  </p>`;
@@ -75,11 +77,11 @@
 					// console.log(y.getDate());
 					let m=data.length;
 					let n=Object.values(data[0]).length;
-					const userDate=new Date();
-					const currentMonth=userDate.getMonth();
-					const currentDate=userDate.getDate();
-					const currentHour=userDate.getHours();
-					const currentTime=24*30*(currentMonth+1)+24*(currentDate-1)+currentHour;
+					let userDate=new Date();
+					let currentMonth=userDate.getMonth();
+					let currentDate=userDate.getDate();
+					let currentHour=userDate.getHours();
+					let currentTime=24*30*(currentMonth+1)+24*(currentDate-1)+currentHour;
 					//console.log(`Current time=${currentTime}`);
 
 					for (let i=0;i<m;i++){
